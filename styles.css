@@ -284,3 +284,24 @@ input.placeholder {
     padding-right: 12%;
     padding-left: 12%;
 }
+
+.my-img-cell {
+    width: auto;
+    margin: .5em;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+@media (max-width: 1400px) {
+    .my-height-limit {
+        height: auto;
+        overflow: auto;
+    }
+}
+
+@media (max-width: 1000px) {
+    .my-black-square {
+        width: auto;
+        height: 198px;
+    }
+}
