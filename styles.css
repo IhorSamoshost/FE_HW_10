@@ -93,7 +93,7 @@ body {
 }
 
 .my-nav-container {
-    width: 191px;
+    width: fit-content;
     margin-left: 1em;
     margin-right: 1em;
     display: flex;
@@ -101,14 +101,15 @@ body {
 }
 
 .my-nav {
+    width: 191px;
     display: flex;
     justify-content: space-around;
-    width: 100%;
 }
 
 .my-nav-collapse {
-    width: 100%;
+    width: 191px;
     display: flex;
+    justify-content: space-around;
 }
 
 .my-nav-toggler {
