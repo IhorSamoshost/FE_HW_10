@@ -11,6 +11,10 @@
     font-weight: normal;
 }
 
+body {
+    min-width: 360px;
+}
+
 .my-start-flex-box {
     display: flex;
     justify-content: flex-start;
@@ -61,16 +65,58 @@
     outline: none;
 }
 
-.my-white-background {
+.my-container {
+    margin: 0 0;
+    padding: 0 0;
+    max-width: 100%;
+}
+
+.my-row {
+    margin: 0;
+}
+
+.my-header-container {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    align-content: center;
+    text-align: center;
     background-color: white !important;
 }
 
-.my-insta-left-padding {
-    padding-left: 6em;
+.my-search {
+    width: 198px;
+    margin: 0 3em;
 }
 
-.my-nav-right-margin {
-    margin-right: 6em !important;
+.my-nav-container {
+    width: 191px;
+    margin-left: 1em;
+    margin-right: 1em;
+    display: flex;
+    justify-content: center;
+}
+
+.my-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.my-nav-collapse {
+    width: 100%;
+    display: flex;
+}
+
+.my-nav-toggler {
+    margin: 0 .75em !important;
+}
+
+.my-nav-toggler:focus {
+    box-shadow: none;
 }
 
 .my-invisible {
@@ -79,6 +125,9 @@
 }
 
 .my-input {
+    width: 100%;
+    margin: 0 0 !important;
+    padding: 3px;
     text-align: center;
     border: 1px solid #DBDBDB;
     border-radius: 3px;
@@ -142,25 +191,31 @@ input.placeholder {
     transform: matrix(1, 0, 0, -1, 0, 0);
 }
 
-.my-height-limit {
-    height: 2196px;
-    overflow: hidden;
-}
-
 .my-pad-for-circle {
     padding: 15%;
 }
 
 .my-row-1 {
+    margin: 0;
     padding-top: 5%;
     align-items: center;
 }
 
-.my-big-name-font {
+.my-big-name-holder {
+    margin-right: 5%;
+}
+
+.my-big-name {
     font-size: 26px;
     line-height: 32px;
     text-align: center;
     color: #262626;
+}
+
+.my-btns-holder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .my-big-btn {
@@ -185,6 +240,7 @@ input.placeholder {
 }
 
 .my-row-2-3 {
+    margin: 0;
     padding-top: 3.5%;
     align-items: center;
 }
@@ -194,10 +250,6 @@ input.placeholder {
     font-size: 17px;
     line-height: 21px;
     color: #262626;
-}
-
-.my-row-2-lefter-item {
-    margin-left: .5em;
 }
 
 .my-row-3-text-font {
@@ -214,13 +266,19 @@ input.placeholder {
     color: #133768;
 }
 
-.my-circles-holder {
-    margin-top: 2em;
-    padding-left: 10em;
-    padding-right: 0;
+.my-contacts {
+    margin-left: 0;
 }
 
-.photo {
+.my-circles-holder {
+    margin-top: 2em;
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+.my-photo {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -253,17 +311,17 @@ input.placeholder {
     padding-top: 1.5em;
 }
 
-.my-no-right-padding {
-    padding-right: 0;
-}
-
 .my-post-holder {
-    gap: .4em;
     font-weight: bold;
     font-size: 12px;
     line-height: 15px;
     letter-spacing: 0.09em;
     color: #262626;
+}
+
+.my-post-holder:focus {
+    transform: none;
+    text-decoration: none;
 }
 
 .my-post-holder:hover {
@@ -280,9 +338,18 @@ input.placeholder {
     color: #8F8F8F;;
 }
 
-.my-cont-paddings {
-    padding-right: 12%;
-    padding-left: 12%;
+.my-label-pic {
+    align-self: center;
+    margin: 0 .4em;
+}
+
+.my-square-holder {
+    flex-direction: column;
+    max-width: 100%;
+}
+
+.my-responsive-squares {
+    justify-content: center;
 }
 
 .my-img-cell {
@@ -292,16 +359,80 @@ input.placeholder {
     padding-right: 0;
 }
 
-@media (max-width: 1400px) {
-    .my-height-limit {
-        height: auto;
-        overflow: auto;
-    }
-}
+@media (max-width: 991px) {
 
-@media (max-width: 1000px) {
+    .my-header-container {
+        align-items: center;
+        padding: 0 5px !important;
+        margin-right: 5px;
+        gap: 3px;
+    }
+
+    .my-nav-toggler {
+        margin: .5em .75em !important;
+    }
+
+    .my-nav {
+        margin-right: 0 !important;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .my-owner-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .my-pad-for-circle {
+        padding: 5%;
+    }
+
+    .my-row-1 {
+        padding-top: 2%;
+    }
+
+    .my-big-name {
+        justify-content: center;
+    }
+
+    .my-btns-holder {
+        justify-content: center;
+    }
+
+    .my-contacts {
+        --bs-gutter-x: 0;
+        margin-left: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .my-circles-holder {
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .my-post-holder {
+        margin-top: .5em;
+    }
+
+    .my-img-cell {
+        margin: .3em;
+    }
+
     .my-black-square {
         width: auto;
         height: 198px;
+    }
+}
+
+@media (max-width: 680px) {
+    .my-responsive-squares {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 380px) {
+    .my-circles-holder {
+        flex-direction: column;
     }
 }
